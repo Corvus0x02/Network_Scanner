@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
+# Python3 script for scanning a provided network or target, returns IP and MAC address(es)
+# Requires root/admin privileges on the device
+
+#Imports
 import scapy.all as scapy
 import argparse
 
-#Gather user input
+#Function to intake user provided arguments
 def get_arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument("-t", "--target", dest="target", help="The target IP or IP Range")
